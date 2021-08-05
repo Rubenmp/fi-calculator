@@ -1,6 +1,6 @@
 # Financial Independence calculator
 
-This program shows a webview representing the stats that any person has to reach financial independence.
+[Webview](https://rubenmp.github.io/fi-calculator/) representing the stats that any person has to reach financial independence.
 
 **If you have any suggestion please create an [issue](https://github.com/Rubenmp/fi-calculator/issues)!**
 
