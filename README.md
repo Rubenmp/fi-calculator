@@ -19,13 +19,13 @@ Sorted by priority:
   - [TODO] List of percentages per year
   - [TODO] Attached to an index found (MSCI World, S&P 500)
   - [TODO] T/F use Permanent Portfolio strategy (initially or after X years)
-- [TODO] Initial amount of money
+- [TODO] Initial amount of money to invest
 - [TODO] Taxes when you take money out (default: 0%)
 - [TODO] Randomness
   - [TODO] Configure X months without salary (will be assigned randomly)
-- [TODO] Human errors in investment
+- [TODO] Human mistakes in investment
   - [TODO] Configure sell of X% of stocks (and next buy) after Y% of stocks downfall
-- [TODO] Inflation (fixed or per year)
+- [TODO] Inflation rate (fixed or per year)
 
 
 ## Output
