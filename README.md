@@ -1,4 +1,4 @@
-# Financial independence calculator
+# Financial Independence calculator
 
 This program shows a webview representing the stats that any person has to reach financial independence.
 
@@ -12,18 +12,20 @@ Sorted by priority:
   - [TODO] Use salary distribution from a country (data scraping from somewhere)
   - [TODO] Different net salary per month each year
 - [TODO] Expenses per month
+  - This number will be used to compute life costs (paassive income required for Financial Independence)
 - [TODO] Years to compute
-- [TODO] Initial amount of money
 - [TODO] Investment strategy to select from this list 
   - [TODO] Fixed percentage 
   - [TODO] List of percentages per year
   - [TODO] Attached to an index found (MSCI World, S&P 500)
   - [TODO] T/F use Permanent Portfolio strategy (initially or after X years)
+- [TODO] Initial amount of money
 - [TODO] Taxes when you take money out (default: 0%)
 - [TODO] Randomness
   - [TODO] Configure X months without salary (will be assigned randomly)
 - [TODO] Human errors in investment
   - [TODO] Configure sell of X% of stocks (and next buy) after Y% of stocks downfall
+- [TODO] Inflation (fixed or per year)
 
 
 ## Output
