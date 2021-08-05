@@ -1,6 +1,6 @@
 # Financial Independence calculator
 
-[Webview](https://rubenmp.github.io/fi-calculator/) representing the stats that any person has to reach financial independence.
+[Web](https://rubenmp.github.io/fi-calculator/) representing statistics about the possibility to reach financial independence.
 
 **If you have any suggestion please create an [issue](https://github.com/Rubenmp/fi-calculator/issues)!**
 
@@ -42,7 +42,7 @@ Sorted by priority:
 - [TODO] (If distribution of net salary per month is used) Percentage of people reachng financial independence after *Years to compute* in provided country
 
 ## Way of working
-If you want to help:
+Thanks! Help is appreciated. If you want to help please follow these steps:
 - Assign any [issue](https://github.com/Rubenmp/fi-calculator/issues) to you
 - [Create feature branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 - Do the issue in that branch
