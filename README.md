@@ -36,6 +36,8 @@ Sorted by priority:
 Sorted by priority:
 
 - [TODO] Saved money
+  - [TODO] At the end
+  - [TODO] Year per year plot
 - [TODO] Monthly passive income
 - [TODO] (If distribution of net salary per month is used) Percentage of people reachng financial independence after *Years to compute* in provided country
 
