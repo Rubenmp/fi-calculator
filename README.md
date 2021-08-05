@@ -12,7 +12,7 @@ Sorted by priority:
   - [TODO] Use salary distribution from a country (data scraping from somewhere)
   - [TODO] Different net salary per month each year
 - [TODO] Expenses per month
-  - This number will be used to compute life costs (paassive income required for Financial Independence)
+  - This number will be used to compute life costs (passive income required for Financial Independence)
 - [TODO] Years to compute
 - [TODO] Investment strategy to select from this list 
   - [TODO] Fixed percentage 
