@@ -14,19 +14,22 @@ Sorted by priority:
 - [TODO] Expenses per month
   - This number will be used to compute life costs (passive income required for Financial Independence)
 - [TODO] Years to compute
-- [TODO] Investment strategy to select from this list 
+- [TODO] Investment strategy
   - [TODO] Fixed percentage 
   - [TODO] List of percentages per year
   - [TODO] Attached to an index found (MSCI World, S&P 500)
   - [TODO] T/F use Permanent Portfolio strategy (initially or after X years)
+  - [TODO] Human mistakes
+    - [TODO] Configure sell of X% of stocks (and next buy) after Y% of stocks downfall
+    - [TODO] Invest in cryptocurrencies
+    - [TODO] Invest in Ibex35
 - [TODO] Initial amount of money to invest
 - [TODO] Taxes when you take money out (default: 0%)
 - [TODO] Randomness
   - [TODO] Configure X months without salary (will be assigned randomly)
-- [TODO] Human mistakes in investment
-  - [TODO] Configure sell of X% of stocks (and next buy) after Y% of stocks downfall
-  - [TODO] Invest in cryptocurrencies
 - [TODO] Inflation rate (fixed or per year)
+  - This will automatically increase your expenses per month
+- [TODO] Extra money (or expenses) specified per year
 
 
 ## Output
@@ -34,7 +37,7 @@ Sorted by priority:
 
 - [TODO] Saved money
 - [TODO] Monthly passive income
-- [TODO] (If distribution of net salary per month is used) Percentage of people reachng financial independence after *Years to compute* in given country
+- [TODO] (If distribution of net salary per month is used) Percentage of people reachng financial independence after *Years to compute* in provided country
 
 ## Way of working
 If you want to help:
