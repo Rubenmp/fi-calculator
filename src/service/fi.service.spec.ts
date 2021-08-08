@@ -4,7 +4,7 @@ import { FIResult } from 'src/model/fi-result';
 
 import { FiService } from './fi.service';
 
-fdescribe('FiService', () => {
+describe('FiService', () => {
   let service: FiService;
   const monthsPerYear : number = 12;
 
