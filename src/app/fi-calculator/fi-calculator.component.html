@@ -1,13 +1,15 @@
 <b>Financial independence calculator</b>
   
 <fi-input
-    (fiParametersEvent)="onFIParameterChange($event)"
-    >
+    (fiParametersEvent)="onFIParameterChange($event)">
 </fi-input>
 
 <br>
 
-<fi-output></fi-output>
+<fi-output
+[fiParameters]="fiParameters"
+>
+</fi-output>
 
 <br>
 

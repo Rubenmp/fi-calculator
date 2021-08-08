@@ -7,6 +7,7 @@ import { FIParameters } from '../../model/fi-parameters';
   styleUrls: ['./fi-calculator.component.less']
 })
 export class FiCalculatorComponent implements OnInit {
+  fiParameters: FIParameters | undefined;
 
   constructor() { }
 
@@ -16,6 +17,7 @@ export class FiCalculatorComponent implements OnInit {
 
   onFIParameterChange(fiParameters: FIParameters) {
     console.log(fiParameters);
+    this.fiParameters = fiParameters;
   }
 
 }

@@ -8,11 +8,19 @@ import { FIParameters } from '../../model/fi-parameters';
 })
 
 export class FiOutputComponent implements OnInit {
-  @Input() fiParameters: FIParameters | undefined;
+  @Input() set fiParameters(fiParameters: FIParameters | undefined) {
+    if (fiParameters){
+      this.computeOutput(fiParameters);
+    }
+  }
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  computeOutput(fiParameters: FIParameters) {
+    console.log("Paramters received in output component!");
   }
 
 }
