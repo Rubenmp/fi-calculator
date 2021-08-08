@@ -38,7 +38,7 @@ Sorted by priority:
 - [TODO] Saved money
   - [TODO] At the end
   - [TODO] Year per year plot
-- [TODO] Monthly passive income
+- [TODO] Monthly passive income<!--  -->
 - [TODO] (If distribution of net salary per month is used) Percentage of people reachng financial independence after *Years to compute* in provided country
 
 
@@ -47,7 +47,7 @@ This page is stored in github pages. We must run this command
 ```
 $ ng deploy --base-href=https://rubenmp.github.io/fi-calculator/
 ```
-if we want to have the new code available in the web. This command will update branch +gh-pages* with the index.html, css and javascript files.
+if we want to have the new code available in the web. This command will update branch *gh-pages* with the index.html, css and javascript files.
 
 
 ## Way of working
