@@ -41,6 +41,15 @@ Sorted by priority:
 - [TODO] Monthly passive income
 - [TODO] (If distribution of net salary per month is used) Percentage of people reachng financial independence after *Years to compute* in provided country
 
+
+## Deploy
+This page is stored in github pages. We must run this command
+```
+$ ng deploy --base-href=https://rubenmp.github.io/fi-calculator/
+```
+if we want to have the new code available in the web. This command will update branch +gh-pages* with the index.html, css and javascript files.
+
+
 ## Way of working
 Thanks! Help is appreciated. If you want to help please follow these steps:
 - Assign any [issue](https://github.com/Rubenmp/fi-calculator/issues) to you
@@ -48,4 +57,6 @@ Thanks! Help is appreciated. If you want to help please follow these steps:
 - Do the issue in that branch
 - Create a [pull request](https://github.com/Rubenmp/fi-calculator/pulls)
 
-If I don't see your issues/pull request(s) please send me an email to *ruben.morales.perez@gmail.com*
+If I don't see your issues/pull request(s) please send me an email to *ruben.morales.perez@gmail.com*.
+
+
