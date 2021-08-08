@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FIParameters } from '../../model/fi-parameters';
 
 @Component({
   selector: 'fi-input',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fi-input.component.less']
 })
 export class FiInputComponent implements OnInit {
+  @Output() fiParametersEvent = new EventEmitter<FIParameters>();
+  fiParameters: FIParameters = new FIParameters;
 
   constructor() { }
 
   ngOnInit(): void {
+    console.log("Input sent");
+    this.fiParametersEvent.emit(this.fiParameters);
   }
 
 }
