@@ -15,6 +15,7 @@ export class FiService {
 
     for (let i = 0; i < fiParameters.yearsToCompute; i++) {
       computeOneYear(fiParameters, fiResult);
+      fiResult.currentYear += 1;
     }
 
     return fiResult;
