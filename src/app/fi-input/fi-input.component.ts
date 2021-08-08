@@ -17,4 +17,7 @@ export class FiInputComponent implements OnInit {
     this.fiParametersEvent.emit(this.fiParameters);
   }
 
+  emitFIParameters(value: any) {
+    console.log("emit");
+  }
 }
