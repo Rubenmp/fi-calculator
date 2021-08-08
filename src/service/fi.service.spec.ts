@@ -6,6 +6,7 @@ import { FiService } from './fi.service';
 
 fdescribe('FiService', () => {
   let service: FiService;
+  const monthsPerYear : number = 12;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
@@ -16,6 +17,20 @@ fdescribe('FiService', () => {
     expect(service).toBeTruthy();
   });
 
+  // Basic tests
+  it('#compute Test income, expenses and year', () => {
+    let fiParameters: FIParameters = new FIParameters();
+    fiParameters.yearsToCompute = 1;
+    fiParameters.monthlyIncome = 50;
+    fiParameters.monthlyExpenses = 30;
+
+    let fiResult : FIResult = service.compute(fiParameters);
+
+    expect(fiResult.currentYear).withContext("Current year").toBe(1);
+    expect(fiResult.monthlyExpensesWithInflation).withContext("Monthly expenses").toBe(fiParameters.monthlyExpenses);
+    let savedMoney = (fiParameters.monthlyIncome - fiParameters.monthlyExpenses) * monthsPerYear * fiParameters.yearsToCompute;
+    expect(fiResult.savedMoney).withContext("Saved money").toBe(savedMoney);
+  });
 
   it('#compute Test income, expenses and years', () => {
     let fiParameters: FIParameters = new FIParameters();
@@ -26,7 +41,9 @@ fdescribe('FiService', () => {
     let fiResult : FIResult = service.compute(fiParameters);
 
     expect(fiResult.currentYear).withContext("Current year").toBe(3);
-
+    expect(fiResult.monthlyExpensesWithInflation).withContext("Monthly expenses").toBe(fiParameters.monthlyExpenses);
+    let savedMoney = (fiParameters.monthlyIncome - fiParameters.monthlyExpenses) * monthsPerYear * fiParameters.yearsToCompute;
+    expect(fiResult.savedMoney).withContext("Saved money").toBe(savedMoney);
   });
   
 });
