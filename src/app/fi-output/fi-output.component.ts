@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FIParameters } from '../../model/fi-parameters';
+import { FIResult } from 'src/model/fi-result';
 
 @Component({
   selector: 'fi-output',
@@ -10,9 +10,9 @@ import { FIParameters } from '../../model/fi-parameters';
 export class FiOutputComponent implements OnInit {
   showOutput : boolean = false;
 
-  @Input() set fiParameters(fiParameters: FIParameters | undefined) {
-    if (fiParameters){
-      this.computeOutput(fiParameters);
+  @Input() set fiResult(fiResult: FIResult | undefined) {
+    if (fiResult){
+      this.computeOutput(fiResult);
     }
   }
 
@@ -21,7 +21,7 @@ export class FiOutputComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  computeOutput(fiParameters: FIParameters) {
+  computeOutput(fiResult: FIResult) {
     console.log("Paramters received in output component!");
     this.showOutput = true;
   }

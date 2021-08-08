@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FIResult } from 'src/model/fi-result';
+import { FiService } from 'src/service/fi.service';
 import { FIParameters } from '../../model/fi-parameters';
 
 @Component({
@@ -7,17 +9,16 @@ import { FIParameters } from '../../model/fi-parameters';
   styleUrls: ['./fi-calculator.component.less']
 })
 export class FiCalculatorComponent implements OnInit {
-  fiParameters: FIParameters | undefined;
+  fiResult: FIResult | undefined;
 
-  constructor() { }
+  constructor(private fiService: FiService) { }
 
   ngOnInit(): void {
   }
 
 
   onFIParameterChange(fiParameters: FIParameters) {
-    console.log(fiParameters);
-    this.fiParameters = fiParameters;
+    this.fiResult = this.fiService.compute(fiParameters);
   }
 
 }
