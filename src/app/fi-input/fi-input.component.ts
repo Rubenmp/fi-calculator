@@ -13,6 +13,7 @@ export class FiInputComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   emitFIParameters() {
