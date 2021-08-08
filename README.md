@@ -52,14 +52,14 @@ This page is stored in github pages. We must run this command
 ```
 $ ng deploy --base-href=https://rubenmp.github.io/fi-calculator/
 ```
-if we want to have the new code available in the web. This command will update branch *gh-pages* with the index.html, css and javascript files.
+if we want to have the new code available in the web. This command will update branch *gh-pages* with generated index.html, CSS and Javascript files.
 
 
 ## Way of working
 If you want to help please follow these steps:
-- Assign any [issue](https://github.com/Rubenmp/fi-calculator/issues) to you
-- [Create feature branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
-- Do the issue in that branch
-- Create a [pull request](https://github.com/Rubenmp/fi-calculator/pulls)
+- Assign yourself any [issue](https://github.com/Rubenmp/fi-calculator/issues).
+- [Create feature branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
+- Implement the issue in that branch.
+- Create a [pull request](https://github.com/Rubenmp/fi-calculator/pulls) passing the tests.
 
-If I don't see your issues/pull request(s) please send me an email to *ruben.morales.perez@gmail.com*.
+If I don't see your issue(s)/pull request(s) please send me an email to *ruben.morales.perez@gmail.com*.
