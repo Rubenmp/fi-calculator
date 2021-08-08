@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FiInputComponent } from './fi-input/fi-input.component';
 import { FiOutputComponent } from './fi-output/fi-output.component';
 import { FiCalculatorComponent } from './fi-calculator/fi-calculator.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FiCalculatorComponent } from './fi-calculator/fi-calculator.component';
     FiCalculatorComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
