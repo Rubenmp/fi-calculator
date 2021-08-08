@@ -55,7 +55,11 @@ function _getYearlyInflationMultiplier(yearlyInflationPercentage: number): numbe
 
 function _getMonthlyInflationMultiplier(monthIndex: number, yearlyInflationPercentage: number): number {
   let yearlyInflationMultiplier: number = _getYearlyInflationMultiplier(yearlyInflationPercentage);
-  return (monthIndex/12)*yearlyInflationMultiplier;
+  if (yearlyInflationMultiplier > 1){
+    return 1 + ((monthIndex/12) * yearlyInflationMultiplier);
+  }
+
+  return 1;
 }
 
 function _fixDefaultValues(fiParameters: FIParameters) {

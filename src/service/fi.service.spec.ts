@@ -18,7 +18,7 @@ fdescribe('FiService', () => {
   });
 
   // Basic tests
-  fit('#compute Test income, expenses and year', () => {
+  it('#compute Test income, expenses and year', () => {
     let fiParameters: FIParameters = new FIParameters();
     fiParameters.yearsToCompute = 1;
     fiParameters.monthlyIncome = 50;
