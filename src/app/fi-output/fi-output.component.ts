@@ -9,6 +9,7 @@ import { FIResult } from 'src/model/fi-result';
 
 export class FiOutputComponent implements OnInit {
   showOutput : boolean = false;
+  _fiResult: FIResult = new FIResult();
 
   @Input() set fiResult(fiResult: FIResult | undefined) {
     if (fiResult){
@@ -22,7 +23,7 @@ export class FiOutputComponent implements OnInit {
   }
 
   computeOutput(fiResult: FIResult) {
-    console.log("Paramters received in output component!");
+    this._fiResult = fiResult;
     this.showOutput = true;
   }
 
