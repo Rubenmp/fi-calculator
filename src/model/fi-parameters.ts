@@ -1,5 +1,5 @@
 export class FIParameters {
-    monthlyIncome: number = 0;
-    monthlyExpenses: number = 0;
-    yearsToCompute: number = 0;
+    monthlyIncome: number = 100;
+    monthlyExpenses: number = 90;
+    yearsToCompute: number = 1;
 }
