@@ -6,6 +6,7 @@ import { FiInputComponent } from './fi-input/fi-input.component';
 import { FiOutputComponent } from './fi-output/fi-output.component';
 import { FiCalculatorComponent } from './fi-calculator/fi-calculator.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
