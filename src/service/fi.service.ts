@@ -6,6 +6,7 @@ import { FIResult } from 'src/model/fi-result';
   providedIn: 'root'
 })
 export class FiService {
+  static monthsPerYear: number = 12;
 
   constructor() { }
 
@@ -15,19 +16,32 @@ export class FiService {
 
     for (let i = 0; i < fiParameters.yearsToCompute; i++) {
       computeOneYear(fiParameters, fiResult);
-      fiResult.currentYear += 1;
     }
 
     return fiResult;
   }
 }
-function computeOneYear(fiParameters: FIParameters, fiResult: FIResult) {
-  let monthlyRevenue : number = getMonthlyRevenue(fiParameters);
 
-  fiResult.savedMoney += monthlyRevenue * 12;
+function computeOneYear(fiParameters: FIParameters, fiResult: FIResult) {
+  for (let monthIndex = 1; monthIndex <= FiService.monthsPerYear; monthIndex++) {
+    computeOneMonth(monthIndex, fiParameters, fiResult);
+  }
+
+  includeInflationChanges(fiParameters.yearlyInflationPercentage, fiResult);
+  fiResult.currentYear += 1;
 }
 
-function getMonthlyRevenue(fiParameters: FIParameters): number {
-  return fiParameters.monthlyIncome - fiParameters.monthlyExpenses;
+function computeOneMonth(monthIndex: number, fiParameters: FIParameters, fiResult: FIResult) {
+  let monthlyExpenses: number = fiResult.monthlyExpensesWithInflation;
+  let monthlyRevenue: number = fiParameters.monthlyIncome - monthlyExpenses;
+
+  fiResult.savedMoney += monthlyRevenue;
+}
+
+
+function includeInflationChanges(yearlyInflationPercentage: number, fiResult: FIResult) {
+  let inflationMultiplier: number = 1 + (yearlyInflationPercentage / 100);
+
+  fiResult.monthlyExpensesWithInflation *= inflationMultiplier;
 }
 
