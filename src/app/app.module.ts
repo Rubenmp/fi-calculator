@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { FiInputComponent } from './fi-input/fi-input.component';
 import { FiOutputComponent } from './fi-output/fi-output.component';
+import { FiCalculatorComponent } from './fi-calculator/fi-calculator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FiInputComponent,
-    FiOutputComponent
+    FiOutputComponent,
+    FiCalculatorComponent
   ],
   imports: [
     BrowserModule
