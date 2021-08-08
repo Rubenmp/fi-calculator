@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FIParameters } from '../../model/fi-parameters';
 
 @Component({
@@ -8,6 +8,8 @@ import { FIParameters } from '../../model/fi-parameters';
 })
 
 export class FiOutputComponent implements OnInit {
+  showOutput : boolean = false;
+
   @Input() set fiParameters(fiParameters: FIParameters | undefined) {
     if (fiParameters){
       this.computeOutput(fiParameters);
@@ -21,6 +23,7 @@ export class FiOutputComponent implements OnInit {
 
   computeOutput(fiParameters: FIParameters) {
     console.log("Paramters received in output component!");
+    this.showOutput = true;
   }
 
 }
