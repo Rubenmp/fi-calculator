@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FIParameters } from '../../model/fi-parameters';
 
 @Component({
   selector: 'fi-calculator',
@@ -10,6 +11,11 @@ export class FiCalculatorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  onFIParameterChange(fiParameters: FIParameters) {
+    console.log(fiParameters);
   }
 
 }
