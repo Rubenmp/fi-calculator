@@ -13,11 +13,9 @@ export class FiInputComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("Input sent");
-    this.fiParametersEvent.emit(this.fiParameters);
   }
 
-  emitFIParameters(value: any) {
-    console.log("emit");
+  emitFIParameters() {
+    this.fiParametersEvent.emit(this.fiParameters);
   }
 }
