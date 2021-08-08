@@ -8,12 +8,12 @@
 Sorted by priority:
 
 - [TODO] Net salary per month
-  - [TODO] Fixed
+  - Fixed
   - [TODO] Use salary distribution from a country (data scraping from somewhere)
   - [TODO] Different net salary per month each year
-- [TODO] Expenses per month
+- Expenses per month
   - This number will be used to compute life costs (passive income required for Financial Independence)
-- [TODO] Years to compute
+- Years to compute
 - [TODO] Investment strategy
   - [TODO] Fixed percentage 
   - [TODO] List of percentages per year
@@ -36,7 +36,7 @@ Sorted by priority:
 Sorted by priority:
 
 - [TODO] Saved money
-  - [TODO] At the end
+  - At the end
   - [TODO] Year per year plot
 - [TODO] Monthly passive income<!--  -->
 - [TODO] (If distribution of net salary per month is used) Percentage of people reachng financial independence after *Years to compute* in provided country

@@ -1,0 +1,23 @@
+<b>Parámetros</b>
+
+<br>
+<br>
+
+<mat-form-field class="monthly-income" >
+    <input matInput [(ngModel)]="fiParameters.monthlyIncome" type="number" placeholder="Ingresos mensuales netos (€)">
+</mat-form-field>
+ 
+<mat-form-field class="monthly-expenses" style="margin-left: 40px;">
+    <input matInput [(ngModel)]="fiParameters.monthlyExpenses" type="number" placeholder="Gastos mensuales (€)">
+</mat-form-field>
+
+<mat-form-field class="years-to-compute" style="margin-left: 40px;">
+    <input matInput [(ngModel)]="fiParameters.yearsToCompute" type="number" placeholder="Años">
+</mat-form-field>
+
+<br>
+
+
+<button mat-button class="compute" (click)="emitFIParameters()">
+    Calcular
+</button>
