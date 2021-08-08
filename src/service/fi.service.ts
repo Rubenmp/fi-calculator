@@ -11,29 +11,29 @@ export class FiService {
   constructor() { }
 
   compute(fiParameters: FIParameters): FIResult {
-    fixDefaultValues(fiParameters);
+    _fixDefaultValues(fiParameters);
     let fiResult : FIResult = new FIResult();
     fiResult.monthlyExpensesWithInflation = fiParameters.monthlyExpenses;
 
     for (let i = 0; i < fiParameters.yearsToCompute; i++) {
-      computeOneYear(fiParameters, fiResult);
+      _computeOneYear(fiParameters, fiResult);
     }
 
     return fiResult;
   }
 }
 
-function computeOneYear(fiParameters: FIParameters, fiResult: FIResult) {
+function _computeOneYear(fiParameters: FIParameters, fiResult: FIResult) {
   for (let monthIndex = 1; monthIndex <= FiService.monthsPerYear; monthIndex++) {
-    computeOneMonth(monthIndex, fiParameters, fiResult);
+    _computeOneMonth(monthIndex, fiParameters, fiResult);
   }
 
-  includeInflationChanges(fiParameters.yearlyInflationPercentage, fiResult);
+  _includeInflationChanges(fiParameters.yearlyInflationPercentage, fiResult);
   fiResult.currentYear += 1;
 }
 
-function computeOneMonth(monthIndex: number, fiParameters: FIParameters, fiResult: FIResult) {
-  let monthlyInflationMultiplier: number = getMonthlyInflationMultiplier(monthIndex, fiParameters.yearlyInflationPercentage);  
+function _computeOneMonth(monthIndex: number, fiParameters: FIParameters, fiResult: FIResult) {
+  let monthlyInflationMultiplier: number = _getMonthlyInflationMultiplier(monthIndex, fiParameters.yearlyInflationPercentage);  
   let monthlyExpenses: number = fiResult.monthlyExpensesWithInflation * monthlyInflationMultiplier;
   let monthlyRevenue: number = fiParameters.monthlyIncome - monthlyExpenses;
 
@@ -41,24 +41,24 @@ function computeOneMonth(monthIndex: number, fiParameters: FIParameters, fiResul
 }
 
 
-function includeInflationChanges(yearlyInflationPercentage: number, fiResult: FIResult) {
-  let inflationMultiplier: number = getYearlyInflationMultiplier(yearlyInflationPercentage);
+function _includeInflationChanges(yearlyInflationPercentage: number, fiResult: FIResult) {
+  let inflationMultiplier: number = _getYearlyInflationMultiplier(yearlyInflationPercentage);
 
   fiResult.monthlyExpensesWithInflation *= inflationMultiplier;
 }
 
 
-function getYearlyInflationMultiplier(yearlyInflationPercentage: number): number {
+function _getYearlyInflationMultiplier(yearlyInflationPercentage: number): number {
   return 1 + (yearlyInflationPercentage / 100);
 }
 
 
-function getMonthlyInflationMultiplier(monthIndex: number, yearlyInflationPercentage: number): number {
-  let yearlyInflationMultiplier: number = getYearlyInflationMultiplier(yearlyInflationPercentage);
+function _getMonthlyInflationMultiplier(monthIndex: number, yearlyInflationPercentage: number): number {
+  let yearlyInflationMultiplier: number = _getYearlyInflationMultiplier(yearlyInflationPercentage);
   return (monthIndex/12)*yearlyInflationMultiplier;
 }
 
-function fixDefaultValues(fiParameters: FIParameters) {
+function _fixDefaultValues(fiParameters: FIParameters) {
   if (!fiParameters.yearlyInflationPercentage) {
     fiParameters.yearlyInflationPercentage = 0;
   }
