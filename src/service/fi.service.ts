@@ -11,6 +11,7 @@ export class FiService {
   constructor() { }
 
   compute(fiParameters: FIParameters): FIResult {
+    fixDefaultValues(fiParameters);
     let fiResult : FIResult = new FIResult();
     fiResult.monthlyExpensesWithInflation = fiParameters.monthlyExpenses;
 
@@ -32,7 +33,8 @@ function computeOneYear(fiParameters: FIParameters, fiResult: FIResult) {
 }
 
 function computeOneMonth(monthIndex: number, fiParameters: FIParameters, fiResult: FIResult) {
-  let monthlyExpenses: number = fiResult.monthlyExpensesWithInflation;
+  let monthlyInflationMultiplier: number = getMonthlyInflationMultiplier(monthIndex, fiParameters.yearlyInflationPercentage);  
+  let monthlyExpenses: number = fiResult.monthlyExpensesWithInflation * monthlyInflationMultiplier;
   let monthlyRevenue: number = fiParameters.monthlyIncome - monthlyExpenses;
 
   fiResult.savedMoney += monthlyRevenue;
@@ -40,8 +42,34 @@ function computeOneMonth(monthIndex: number, fiParameters: FIParameters, fiResul
 
 
 function includeInflationChanges(yearlyInflationPercentage: number, fiResult: FIResult) {
-  let inflationMultiplier: number = 1 + (yearlyInflationPercentage / 100);
+  let inflationMultiplier: number = getYearlyInflationMultiplier(yearlyInflationPercentage);
 
   fiResult.monthlyExpensesWithInflation *= inflationMultiplier;
+}
+
+
+function getYearlyInflationMultiplier(yearlyInflationPercentage: number): number {
+  return 1 + (yearlyInflationPercentage / 100);
+}
+
+
+function getMonthlyInflationMultiplier(monthIndex: number, yearlyInflationPercentage: number): number {
+  let yearlyInflationMultiplier: number = getYearlyInflationMultiplier(yearlyInflationPercentage);
+  return (monthIndex/12)*yearlyInflationMultiplier;
+}
+
+function fixDefaultValues(fiParameters: FIParameters) {
+  if (!fiParameters.yearlyInflationPercentage) {
+    fiParameters.yearlyInflationPercentage = 0;
+  }
+  if (!fiParameters.monthlyExpenses) {
+    fiParameters.monthlyExpenses = 0;
+  }
+  if (!fiParameters.monthlyIncome) {
+    fiParameters.monthlyIncome = 0;
+  }
+  if (!fiParameters.yearsToCompute) {
+    fiParameters.yearsToCompute = 0;
+  }
 }
 
